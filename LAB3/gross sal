@@ -1,0 +1,13 @@
+echo "Enter Your Basic Salary\n"
+read s
+if [ $s -lt 1000 ]
+then
+ echo "Enter the Salary greater than 1000"
+else
+ echo " Your Actual Salary : $s "
+ echo " Your Dearness Allowance : $(expr "$s * 10/100" | bc) "
+ echo " Your House Rent : $(expr " $s * 20/100" | bc) "
+ ha=$(expr " $s * 20 / 100" | bc)
+ da=$(expr " $s * 10/100" | bc)
+ echo " Your Gross Salary : $(expr " $s + $da + $ha " | bc )"
+fi 
