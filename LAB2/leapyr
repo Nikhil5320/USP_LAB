@@ -1,0 +1,14 @@
+echo "Enter the year"
+read y
+a=$(echo "$y%4"|bc)
+b=$(echo "$y%100"|bc)
+c=$(echo "$y%400"|bc)
+if [ $a -eq 0 -a $b -ne 0 ]
+then
+   echo "$y a leap year"
+elif [ $c -eq 0 ]
+then
+   echo "$y a leap year"
+else
+   echo "$y not a leap year"
+fi
