@@ -1,0 +1,15 @@
+echo "Enter the 2 numbers "
+read a
+read b
+echo "Enter : "
+echo "1. for Addition \n2. for Subtraction \n3. for the Quotient \n4.for the Reminder \n5.for the product "
+echo " "
+read n
+case $n in
+ 1)echo "Sum of $a and $b = $( expr "$a + $b" | bc) ";;
+ 2)echo "Difference of $a and $b = $( expr "$a - $b" | bc) ";;
+ 3)echo "Quotient of $a / $b = $( expr "scale=2;$a / $b" | bc) ";;
+ 4)echo "Reminder of $a / $b = $( expr "$a % $b" | bc) ";;
+ 5)echo "Product of $a and $b = $( expr "$a * $b" | bc) ";;
+ *)echo "Wrong selection";;
+esac 
