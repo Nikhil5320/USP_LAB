@@ -1,0 +1,17 @@
+echo "Enter the radius of the circle"
+read r
+area=$(echo "3.14 * $r * $r" |bc)
+echo "Area of the circle of radiue $r = $area"
+
+echo "Enter the length and bredth of the rectangle"
+read x
+read y
+area=$(echo " $x * $y " |bc)
+echo "Area of the rectangle of length $x and bredth $y = $area"
+
+
+echo "Enter the base and height of the triangle"
+read b
+read h
+area=$(echo "0.5 * $b * $h" |bc)
+echo "Area of the triangle of base $b and height $h = $area"
