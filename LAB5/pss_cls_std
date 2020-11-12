@@ -1,0 +1,37 @@
+echo "Enter the Student name"
+read name 
+echo "Enter the Register number"
+read rno 
+echo Enter the S1 out of 100 
+read m1 
+echo Enter the S2 out of 100 
+read m2 
+echo Enter the S3 out of 100 
+read m3 
+echo Enter the S4 out of 100 
+read m4 
+echo Enter the S5 out of 100 
+read m5 
+echo Enter the S6 out of 100 
+read m6
+tot=`expr $m1 + $m2 + $m3 + $m4 + $m5 + $m6 | bc`
+percentage=`expr $tot / 6 | bc`
+
+ 
+echo "Name    : $name"
+echo "Roll no : $rno"
+if [ $percentage -ge 90 ]
+then
+ echo "Overall Percentage : $percentage \nOverall Grade : S \nResult : Pass"
+elif [ $percentage -ge 85 -a $percentage -lt 90 ]
+then
+ echo "Overall Percentage : $percentage \nOverall Grade : A \nResult : Pass"
+elif [ $percentage -ge 70 -a $percentage -lt 85 ]
+then
+ echo "Overall Percentage : $percentage \nOverall Grade : B \nResult : Pass"
+elif [ $percentage -ge 55 -a $percentage -lt 70 ]
+then
+ echo "Overall Percentage : $percentage \nOverall Grade : C \nResult : Pass"
+else
+ echo "Overall Percentage : $percentage \nOverall Grade : F \nResult : FAIL!"
+fi
