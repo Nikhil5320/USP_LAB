@@ -1,0 +1,15 @@
+echo "Enter the number elements u wish to see in the fibonocci series"
+read n
+temp1=0
+temp2=1
+ele=0
+echo "\nFibonocci series with $n elements :\n"
+while [ $n -ge 1 ]
+do
+ echo "$ele"
+ ele=`expr $temp2`
+ temp=`expr $temp1`
+ temp1=`expr $temp2`
+ temp2=`expr $temp + $temp2 |bc`
+ n=`expr $n - 1 |bc`
+done
